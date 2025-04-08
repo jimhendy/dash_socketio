@@ -25,6 +25,7 @@ const DashSocketIO = (props: Props) => {
       }
       setSocketId(socket.id);
       setConnected(true);
+      setProps({ 'connected': true });
     }
 
     const onDisconnect = () => {
@@ -33,6 +34,7 @@ const DashSocketIO = (props: Props) => {
       }
       setSocketId(null);
       setConnected(false);
+      setProps({ 'connected': false });
     }
 
     const onEvent = (event: object) => {
